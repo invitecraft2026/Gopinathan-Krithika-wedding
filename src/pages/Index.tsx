@@ -16,7 +16,7 @@ const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div className="min-h-screen bg-background ">
       <AnimatePresence>
         {!isOpen && <LandingScreen onOpen={() => setIsOpen(true)} />}
       </AnimatePresence>

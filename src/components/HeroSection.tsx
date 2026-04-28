@@ -26,12 +26,28 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
       >
-        <h1 className="font-display text-5xl sm:text-6xl md:text-7xl text-foreground mb-2">
-          Gopinathan
+        {/* Gopinathan */}
+        <h1 className="text-5xl sm:text-6xl md:text-7xl text-foreground mb-2">
+          <span
+            className="font-display gold-text-solid"
+            style={{ fontSize: "inherit" }}
+          >
+            G
+          </span>
+          <span className="font-heading">opinathan</span>
         </h1>
+
         <span className="text-secondary text-3xl">❤️</span>
-        <h1 className="font-display text-5xl sm:text-6xl md:text-7xl text-foreground mt-2">
-          Krithika
+
+        {/* Krithika */}
+        <h1 className="text-5xl sm:text-6xl md:text-7xl text-foreground mt-2">
+          <span
+            className="font-display gold-text-solid"
+            style={{ fontSize: "inherit" }}
+          >
+            K
+          </span>
+          <span className="font-heading">rithika</span>
         </h1>
 
         <div className="flex items-center justify-center gap-3 mt-6">
