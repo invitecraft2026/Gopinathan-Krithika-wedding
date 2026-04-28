@@ -10,6 +10,7 @@ import LocationSection from "@/components/LocationSection";
 import ActionButtons from "@/components/ActionButtons";
 import FloatingPetals from "@/components/FloatingPetals";
 import BackgroundMusic from "@/components/BackgroundMusic";
+import SpecialNote from "@/components/SpecialNote";
 
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,18 +45,17 @@ const Index = () => {
             <CountdownTimer />
             <ScratchCard />
             <WeddingDetails />
-            <GallerySection />
+            {/* <GallerySection /> */}
+            <SpecialNote/>
             <LocationSection />
             <ActionButtons />
 
             {/* Footer */}
             <footer className="text-center py-10 px-4">
               <p className="font-display text-2xl gold-text mb-2">
-                Ramesh & Devadharshini
+                Gopinathan & Krithika
               </p>
-              <p className="text-xs text-muted-foreground">
-                Made with love 🌸
-              </p>
+              <p className="text-xs text-muted-foreground">Made with love 🌸</p>
             </footer>
 
             <div className="h-1 gold-gradient" />

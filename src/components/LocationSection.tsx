@@ -4,19 +4,18 @@ import { MapPin } from "lucide-react";
 const venues = [
   {
     title: "Reception",
-    name: "Muthu Mahal",
-    address: "Irumborai, Coimbatore, Tamil Nadu",
-    time: "May 24, 2026 • 6:00 PM – 9:00 PM",
-    mapLink: "https://maps.google.com/?q=Muthu+Mahal+Irumborai+Coimbatore",
+    name: "DSK Mahal",
+    address: "DSK Mahal",
+    time: "May 28, 2026 • 6:00 PM – 9:00 PM",
+    mapLink: "https://maps.google.com/?q=DSK+Mahal",
   },
   {
     title: "Wedding Ceremony",
-    name: "Kumarankundru Temple",
-    address: "Coimbatore, Tamil Nadu, India",
-    time: "May 25, 2026 • 5:30 AM – 6:00 AM",
-    mapLink: "https://maps.google.com/?q=Kumarankundru+Temple+Coimbatore",
+    name: "DSK Mahal",
+    address: "DSK Mahal",
+    time: "May 29, 2026 • 6:00 AM – 7:29 AM",
+    mapLink: "https://maps.google.com/?q=DSK+Mahal",
   },
-  
 ];
 
 const LocationSection = () => {
@@ -39,7 +38,7 @@ const LocationSection = () => {
           <div className="h-px w-10 bg-primary/40" />
         </div>
 
-        {/* ✅ Venue Cards */}
+        {/* Venue Cards */}
         <div className="space-y-6">
           {venues.map((venue, i) => (
             <motion.div

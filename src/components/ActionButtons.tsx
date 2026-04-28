@@ -2,18 +2,17 @@ import { motion } from "framer-motion";
 import { Share2 } from "lucide-react";
 
 const ActionButtons = () => {
+  const handleWhatsAppShare = () => {
+    const message =
+      "Love has brought us together, and now we begin forever 💍✨\n\n" +
+      "With joy in our hearts, we invite you to the Wedding of Gopinathan & Krithika 💖\n\n" +
+      "Kindly open the link below to view our invitation and event details 🌸\n\n" +
+      "Your presence will be a cherished blessing in our celebration ❤️\n\n" +
+      window.location.href;
 
- const handleWhatsAppShare = () => {
-  const message =
-    "Love has brought us together, and now we begin forever 💍✨\n\n" +
-    "With joy in our hearts, we invite you to the Wedding of Ramesh & Devadharshini 💖\n\n" +
-    "Kindly open the link below to view our invitation and event details 🌸\n\n" +
-    "Your presence will be a cherished blessing in our celebration ❤️\n\n" +
-    window.location.href;
-
-  const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
-  window.open(url, "_blank");
-};
+    const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  };
 
   return (
     <section className="py-16 px-4">

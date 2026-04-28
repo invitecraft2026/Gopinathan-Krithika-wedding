@@ -66,15 +66,15 @@ const ScratchCard = () => {
     if (isDrawing.current) scratch(x, y);
   };
 
-  const groom = "Ramesh";
-  const bride = "Devadharshini";
+  const groom = "Gopinathan";
+  const bride = "Krithika";
 
-  // ✅ Updated Calendar Link (Reception)
+  // Updated Calendar Link (Reception)
   const calendarLink = `https://www.google.com/calendar/render?action=TEMPLATE
 &text=${groom}+%26+${bride}+Reception
-&dates=20260524T180000/20260524T210000
+&dates=20260528T180000/20260528T210000
 &details=Join+us+for+the+Wedding+Reception+of+${groom}+%26+${bride}
-&location=Muthu+Mahal,+Irumborai,+Coimbatore`.replace(/\s/g, "");
+&location=DSK+Mahal`.replace(/\s/g, "");
 
   return (
     <section className="py-16 px-4">
@@ -89,8 +89,10 @@ const ScratchCard = () => {
           Reveal the Reception
         </h2>
 
-        <div className="relative invitation-card rounded-2xl overflow-hidden mx-auto" style={{ height: 200 }}>
-          
+        <div
+          className="relative invitation-card rounded-2xl overflow-hidden mx-auto"
+          style={{ height: 200 }}
+        >
           {/* Hidden content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center p-6">
             <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-1">
@@ -98,7 +100,7 @@ const ScratchCard = () => {
             </p>
 
             <p className="font-heading text-2xl font-bold text-foreground">
-              May 24, 2026
+              May 28, 2026
             </p>
 
             <p className="text-muted-foreground mt-1">
@@ -106,7 +108,7 @@ const ScratchCard = () => {
             </p>
 
             <p className="text-muted-foreground text-sm mt-1">
-              Muthu Mahal, Irumborai, Coimbatore
+              DSK Mahal
             </p>
 
             {/* Add to Calendar Button */}
@@ -125,14 +127,22 @@ const ScratchCard = () => {
           {/* Scratch canvas */}
           <canvas
             ref={canvasRef}
-            className={`absolute inset-0 w-full h-full cursor-crosshair touch-none transition-opacity duration-500 ${isRevealed ? "opacity-0 pointer-events-none" : ""}`}
+            className={`absolute inset-0 w-full h-full cursor-crosshair touch-none transition-opacity duration-500 ${
+              isRevealed ? "opacity-0 pointer-events-none" : ""
+            }`}
             onMouseDown={handleStart}
             onMouseUp={handleEnd}
             onMouseLeave={handleEnd}
             onMouseMove={(e) => handleMove(e.clientX, e.clientY)}
-            onTouchStart={(e) => { handleStart(); scratch(e.touches[0].clientX, e.touches[0].clientY); }}
+            onTouchStart={(e) => {
+              handleStart();
+              scratch(e.touches[0].clientX, e.touches[0].clientY);
+            }}
             onTouchEnd={handleEnd}
-            onTouchMove={(e) => { e.preventDefault(); handleMove(e.touches[0].clientX, e.touches[0].clientY); }}
+            onTouchMove={(e) => {
+              e.preventDefault();
+              handleMove(e.touches[0].clientX, e.touches[0].clientY);
+            }}
           />
         </div>
       </motion.div>

@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const CountdownTimer = () => {
 
-  // Fixed wedding date (May 25, 2026, 5:30 AM)
-  const weddingDate = new Date("2026-05-25T05:30:00");
+  // Fixed wedding date (May 28, 2026, 6:00 AM - Muhurtham)
+  const weddingDate = new Date("2026-05-28T06:00:00");
 
   function getTimeLeft() {
     const diff = weddingDate.getTime() - Date.now();
@@ -52,7 +52,7 @@ const CountdownTimer = () => {
         </p>
 
         <h2 className="font-heading text-3xl sm:text-4xl text-foreground mb-8">
-          Our Special Day
+          Our Muhurtham Day
         </h2>
 
         <div className="grid grid-cols-4 gap-3">
